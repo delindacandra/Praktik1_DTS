@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #ed864a;}
+.s1 { color: #ebebeb;}
+.s2 { color: #ed864a; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.ayobelajar.praktik1dts</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.annotation.NonNull</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">android.content.Intent</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android.graphics.Color</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android.view.Menu</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android.view.MenuInflater</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android.view.MenuItem</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android.view.View</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">android.widget.Button</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s2">;</span>
+        <span class="s1">setContentView(R.layout.activity_main)</span><span class="s2">;</span>
+        <span class="s0">final </span><span class="s1">Button btOK = findViewById(R.id.bt_ok)</span><span class="s2">;</span>
+        <span class="s1">btOK.setOnClickListener(view -&gt; btOK.setBackgroundColor(Color.RED))</span><span class="s2">;</span>
+
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public boolean </span><span class="s1">onCreateOptionsMenu(Menu menu) {</span>
+        <span class="s1">MenuInflater menuInflater = getMenuInflater()</span><span class="s2">;</span>
+        <span class="s1">menuInflater.inflate(R.menu.optionmenu</span><span class="s2">,</span><span class="s1">menu)</span><span class="s2">;</span>
+        <span class="s0">return true</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public boolean </span><span class="s1">onOptionsItemSelected(MenuItem item) {</span>
+        <span class="s0">if</span><span class="s1">(item.getItemId()==R.id.menu_item1){</span>
+            <span class="s1">startActivity(</span><span class="s0">new </span><span class="s1">Intent(</span><span class="s0">this</span><span class="s2">, </span><span class="s1">Menu1.</span><span class="s0">class</span><span class="s1">))</span><span class="s2">;</span>
+        <span class="s1">}</span><span class="s0">else if</span><span class="s1">(item.getItemId()==R.id.menu_item2){</span>
+            <span class="s1">startActivity(</span><span class="s0">new </span><span class="s1">Intent(</span><span class="s0">this</span><span class="s2">, </span><span class="s1">Menu2.</span><span class="s0">class</span><span class="s1">))</span><span class="s2">;</span>
+        <span class="s1">}</span><span class="s0">else if</span><span class="s1">(item.getItemId()==R.id.menu_item3){</span>
+            <span class="s1">startActivity(</span><span class="s0">new </span><span class="s1">Intent(</span><span class="s0">this</span><span class="s2">, </span><span class="s1">Menu3.</span><span class="s0">class</span><span class="s1">))</span><span class="s2">;</span>
+        <span class="s1">}</span>
+        <span class="s0">return true</span><span class="s2">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
